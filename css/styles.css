@@ -1,0 +1,163 @@
+@font-face{
+    font-family: Berlin;
+    src: url(../font/berlin/BerlinBold.ttf);
+}
+
+@font-face{
+    font-family: Agency;
+    src: url(../font/agency/Agency.ttf);
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 2rem;
+}
+
+/*----------HEADER----------*/
+
+/*header {
+    position: fixed;
+    z-index: 2;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 10%;
+    text-align: center;
+}
+
+#onglets ul li {
+    font-size: 130%;
+    padding: 5px 40px;
+    display: inline-block;
+}
+
+#onglets li a {
+    color: #FFF;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+
+#onglets li a:hover {
+    color: red;
+}*/
+
+/*--------CONTAINER---------*/
+
+.container{
+    margin-top: 5%;
+    width: 100%;
+}
+
+/*--------HOME BLOCK---------*/
+.home img{
+    width: 100%;
+    height: 80%;
+}
+
+.homeDescription{
+    font-family: Lato;
+    background-color: rgba(251, 240, 246, 0.7);
+    position: absolute;
+    top:25%;
+    z-index: 2;
+    font-size:22px;
+    text-align: center;
+    padding: 50px 100px;
+}
+
+.homeDescription p{
+    margin: 0 auto;
+}
+
+/*-------MUSEUM BLOCK--------*/
+
+.museumImgBlock{
+    text-align: center;
+    height:17%;
+}
+
+.museumImgBlock img {
+    filter: brightness(30%);
+    -webkit-filter: brightness(30%);
+    width: 100%;
+    height: 25% !important;
+    transition: all .3s ease-in-out;
+}
+
+.museumNameBlock{
+    font-family: Agency;
+    position: absolute;
+    text-align: center;
+    margin-top: -45%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+    border: 5px solid #FFF;
+    color: #FFF;
+    padding:5px 10px;
+    font-size: 35px;
+    transition: all .3s ease-in-out;
+}
+
+.museumImgBlock:hover .museumNameBlock{
+    filter: brightness(100%);
+    background-color: #FFF;
+    border-color: #91C768;
+    color: #91C768;
+}
+
+.museumImgBlock img:hover{
+    filter: brightness(100%);
+    -webkit-filter: brightness(100%);
+}
+
+@media(min-width: 641px){
+    .museumNameBlock{
+        margin-top: -17%;
+    }
+
+    .museumImgBlock{
+        text-align: center;
+        height:15%;
+    }
+}
+
+@media(min-width: 1025px){
+    .homeDescription{
+        left: 10%;
+    }
+
+    .museumImgBlock {
+        height: 15%;
+        width: 24.5%;
+        display: inline-block;
+    }
+
+    .museumImgBlock img {
+    height: 633px !important;
+}
+
+.museumNameBlock{
+    font-family: Agency;
+    position: absolute;
+    text-align: center;
+    margin-top: -25%;
+    left: auto;
+    right: auto;
+    margin-left: 8%;
+    margin-right: auto;
+    z-index: 2;
+    border: 5px solid #FFF;
+    color: #FFF;
+    padding:5px 10px;
+    font-size: 35px;
+    transition: all .3s ease-in-out;
+}
+
+
+}
