@@ -1,82 +1,122 @@
-@font-face{
-    font-family: Berlin;
-    src: url(../font/berlin/BerlinBold.ttf);
+@font-face {
+    font-family: Lato;
+    src: url('../font/Lato-Regular.ttf');
 }
 
-@font-face{
-    font-family: Agency;
-    src: url(../font/agency/Agency.ttf);
+@font-face {
+    font-family: Lavanderia;
+    src: url('../font/Lavanderia-Regular.ttf');
 }
 
-html{
+html {
     font-size: 62.5%;
 }
-body{
+
+body {
+    font-family: 'Lato', sans-serif;
     font-size: 2rem;
 }
 
 /*----------HEADER----------*/
-
-/*header {
-    position: fixed;
-    z-index: 2;
-    background-color: black;
+header {
+    display: block;
+    background-color: #404040;
     color: white;
     width: 100%;
-    height: 10%;
+    height: 75px;
+    top: 0;
     text-align: center;
+    position: fixed;
+    z-index: 2;
 }
 
-#onglets ul li {
-    font-size: 130%;
-    padding: 5px 40px;
-    display: inline-block;
+header img {
+    height: 70px;
+
 }
 
-#onglets li a {
-    color: #FFF;
-    font-weight: bold;
-    text-decoration: none;
-    transition: all .3s ease-in-out;
+.accueil, .museum, .application, .contact {
+    display: none;
 }
-
-#onglets li a:hover {
-    color: red;
-}*/
 
 /*--------CONTAINER---------*/
 
-.container{
+.container {
     margin-top: 5%;
     width: 100%;
 }
 
 /*--------HOME BLOCK---------*/
-.home img{
-    width: 100%;
-    height: 80%;
+.home {
+    background-image: url("../images/museeFabre.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
-.homeDescription{
-    font-family: Lato;
+.homeDescription {
+    font-family: 'Lato', sans-serif;
     background-color: rgba(251, 240, 246, 0.7);
-    position: absolute;
-    top:25%;
-    z-index: 2;
-    font-size:22px;
+    margin: 10% 10%;
+    top: 25%;
+    font-size: 2rem;
     text-align: center;
-    padding: 50px 100px;
+    padding: 10px 20px;
+    margin-top: 30%;
 }
 
-.homeDescription p{
+.homeDescription p {
     margin: 0 auto;
+}
+
+#myBtn {
+    background: none !important;
+    border: none;
+    padding: 0 !important;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    margin: 17% auto;
+    width: 80%;
+}
+
+.modal-content img {
+    width: 100%;
+}
+
+.close {
+    float: right;
+    color: #000000;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /*-------MUSEUM BLOCK--------*/
 
-.museumImgBlock{
+.museumImgBlock {
     text-align: center;
-    height:17%;
+    height: 17%;
 }
 
 .museumImgBlock img {
@@ -87,8 +127,7 @@ body{
     transition: all .3s ease-in-out;
 }
 
-.museumNameBlock{
-    font-family: Agency;
+.museumNameBlock {
     position: absolute;
     text-align: center;
     margin-top: -45%;
@@ -99,37 +138,157 @@ body{
     z-index: 2;
     border: 5px solid #FFF;
     color: #FFF;
-    padding:5px 10px;
+    padding: 5px 10px;
     font-size: 35px;
     transition: all .3s ease-in-out;
 }
 
-.museumImgBlock:hover .museumNameBlock{
+.museumImgBlock:hover .museumNameBlock {
     filter: brightness(100%);
     background-color: #FFF;
-    border-color: #91C768;
-    color: #91C768;
+    border-color: #7bc7bd;
+    color: #7bc7bd;
 }
 
-.museumImgBlock img:hover{
+.museumImgBlock img:hover {
     filter: brightness(100%);
     -webkit-filter: brightness(100%);
 }
 
-@media(min-width: 641px){
-    .museumNameBlock{
+/*--------APP BLOCK---------*/
+.appBlock {
+    background-color: #FFFFFF;
+    text-align: center;
+    padding-top: 3%;
+}
+
+.appBlock .appImg {
+    width: 200px;
+}
+
+.appText {
+    display: none;
+}
+
+.carousel {
+    padding-top: 15%;
+}
+
+.appBlock .appText {
+    float: left;
+}
+
+#download img {
+    width: 100px;
+    height: auto;
+}
+
+#download img:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+/*--------CONTACT BLOCK---------*/
+.contactBlock {
+    background-color: #7bc7bd;
+
+}
+
+#footer {
+    color: #FFFFFF;
+    text-align: center;
+    height: 300px;
+}
+
+.adress .title {
+    font-family: 'Lavanderia', sans-serif;
+    font-weight: bold;
+    font-size: 4rem;
+    line-height: 2;
+}
+
+.adress .facebook {
+    width: 50px;
+    height: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.form {
+    font-weight: bold;
+}
+
+form {
+    display: none;
+}
+
+input, textarea {
+    border: 1px solid #404040;
+    border-radius: 5px;
+    padding: 7px;
+    margin: 5px;
+    width: 200px;
+}
+
+input[type=text] {
+    width: 100px;
+}
+
+input[type=submit] {
+    width: 100px;
+    background-color: #404040;
+    color: #FFFFFF;
+}
+
+/*MEDIA QUERIES*/
+@media (min-width: 641px) {
+
+    .museumNameBlock {
         margin-top: -17%;
     }
 
-    .museumImgBlock{
+    .museumImgBlock {
         text-align: center;
-        height:15%;
+        height: 15%;
     }
 }
 
-@media(min-width: 1025px){
-    .homeDescription{
-        left: 10%;
+@media (min-width: 1025px) {
+
+    .accueil, .museum, .application, .contact {
+        display: block;
+    }
+
+    #onglets ul li {
+        font-size: 130%;
+        padding: 2px 40px;
+        display: inline-block;
+        letter-spacing: -1.5px;
+        vertical-align: middle;
+    }
+
+    #onglets li a {
+        color: #FFF;
+        text-decoration: none;
+        transition: all .3s ease-in-out;
+    }
+
+    #onglets li a:hover {
+        color: #7bc7bd;
+    }
+
+    .homeDescription {
+        padding: 40px 100px;
+        margin-top: 10%;
+    }
+
+    .modal-content {
+        margin: 3% auto;
+        width: 80%;
+    }
+
+    .modal-content img {
+        width: 85%;
     }
 
     .museumImgBlock {
@@ -139,25 +298,74 @@ body{
     }
 
     .museumImgBlock img {
-    height: 633px !important;
-}
+        height: 633px !important;
+    }
 
-.museumNameBlock{
-    font-family: Agency;
-    position: absolute;
-    text-align: center;
-    margin-top: -25%;
-    left: auto;
-    right: auto;
-    margin-left: 8%;
-    margin-right: auto;
-    z-index: 2;
-    border: 5px solid #FFF;
-    color: #FFF;
-    padding:5px 10px;
-    font-size: 35px;
-    transition: all .3s ease-in-out;
-}
+    .museumNameBlock {
+        position: absolute;
+        text-align: center;
+        margin-top: -25%;
+        left: auto;
+        right: auto;
+        margin-left: 7.5%;
+        margin-right: auto;
+        z-index: 2;
+        border: 5px solid #FFF;
+        color: #FFF;
+        padding: 5px 10px;
+        font-size: 3rem;
+        transition: all .3s ease-in-out;
+    }
 
+    .carousel {
+        padding-left: 5%;
+        padding-top: 0%;
+        width: 500px;
+        float: left;
+    }
+
+    .appText {
+        display: block;
+        position: absolute;
+        margin-left: 60%;
+        margin-top: 10%;
+        line-height: 2;
+    }
+
+    .appText span {
+        font-family: 'Lavanderia', sans-serif;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    #download {
+        clear: both;
+    }
+
+    #download img {
+        width: auto;
+        height: 55px;
+    }
+
+    #footer {
+        padding: 1% 15%;
+    }
+
+    .adress {
+        float: left;
+    }
+
+    .form {
+        float: right;
+    }
+
+    form {
+        display: block;
+    }
+
+    .form p {
+        line-height: 2;
+        text-transform: uppercase;
+    }
 
 }
